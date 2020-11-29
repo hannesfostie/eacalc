@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Header from './Header';
 import GenderSelector from './GenderSelector';
 import BodyComposition from './BodyComposition';
 
@@ -18,18 +19,20 @@ function EACalc() {
   const fatFreeMass = state.bodymass - fatMass;
 
   return (
-    <div>
-      <h1>Energy Availability Calculator</h1>
-      <GenderSelector selected={state.gender} setGender={setGender} />
-      <BodyComposition
-        bodymass={state.bodymass}
-        setBodyMass={setBodyMass}
-        bodyfat={state.bodyfat}
-        setBodyFat={setBodyFat}
-        fatMass={fatMass}
-        fatFreeMass={fatFreeMass}
-      />
-    </div>
+    <>
+      <Header />
+      <section class="max-w-xl">
+        <GenderSelector selected={state.gender} setGender={setGender} />
+        <BodyComposition
+          bodymass={state.bodymass}
+          setBodyMass={setBodyMass}
+          bodyfat={state.bodyfat}
+          setBodyFat={setBodyFat}
+          fatMass={fatMass}
+          fatFreeMass={fatFreeMass}
+        />
+      </section>
+    </>
   );
 }
 
