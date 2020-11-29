@@ -21,16 +21,32 @@ function EACalc() {
   return (
     <>
       <Header />
-      <section class="max-w-xl">
-        <GenderSelector selected={state.gender} setGender={setGender} />
-        <BodyComposition
-          bodymass={state.bodymass}
-          setBodyMass={setBodyMass}
-          bodyfat={state.bodyfat}
-          setBodyFat={setBodyFat}
-          fatMass={fatMass}
-          fatFreeMass={fatFreeMass}
-        />
+      <section class="flex justify-center p-12">
+        <div class="max-w-3xl flex justify-center flex-wrap overflow-hidden grid grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl mb-4">General Statistics</h3>
+            <p>
+              <ul class="list-disc list-inside">
+                <li>The original <a href="https://eacalc.useful.coach">EA Calculator</a></li>
+                <li>
+                  <a href="#">Research paper</a><br />
+                  <small>Melin, A. et al. (2019). Energy Availability in Athletics: Health, Performance and Physique</small>
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-span-2">
+            <GenderSelector selected={state.gender} setGender={setGender} />
+            <BodyComposition
+              bodymass={state.bodymass}
+              setBodyMass={setBodyMass}
+              bodyfat={state.bodyfat}
+              setBodyFat={setBodyFat}
+              fatMass={fatMass}
+              fatFreeMass={fatFreeMass}
+            />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -1,17 +1,33 @@
 function BodyComposition(props) {
   return (
-    <div>
-      <label htmlFor="bodymass">Body Mass</label>
-      <input type="number" name="bodymass" value={props.bodymass} onChange={e => props.setBodyMass(e.target.value)} />
+    <div class="bg-white shadow p-4 divide-y divide-gray-200 rounded">
+      <h3 class="text-l">Body Composition</h3>
 
-      <label htmlFor="bodyfat">Body Fat %</label>
-      <input type="number" name="bodyfat" value={props.bodyfat} onChange={e => props.setBodyFat(e.target.value)} />
-      <dl>
-        <dt>Fat Mass</dt>
-        <dd>{props.fatMass}</dd>
-        <dt>Fat Free Mass</dt>
-        <dd>{props.fatFreeMass}</dd>
-      </dl>
+      <div class="flex flex-wrap -mx-4 overflow-hidden">
+        <div class="my-4 px-4 w-1/4 overflow-hidden">
+          <input type="number" name="bodymass" value={props.bodymass} onChange={e => props.setBodyMass(e.target.value)} />
+          <br />
+          <label htmlFor="bodymass" class="text-xs">Body mass</label>
+        </div>
+
+        <div class="my-4 px-4 w-1/4 overflow-hidden">
+          <input type="number" name="bodyfat" value={props.bodyfat} onChange={e => props.setBodyFat(e.target.value)} />
+          <br />
+          <label htmlFor="bodyfat" class="text-xs">Est. body fat %</label>
+        </div>
+
+        <div class="my-4 px-4 w-1/4 overflow-hidden">
+          <input type="number" name="fatmass" value={props.fatMass} disabled />
+          <br />
+          <label htmlFor="fatmass" class="text-xs">Fat mass</label>
+        </div>
+
+        <div class="my-4 px-4 w-1/4 overflow-hidden">
+          <input type="number" name="fatfreemass" value={props.fatFreeMass} disabled />
+          <br />
+          <label htmlFor="fatfreemass" class="text-xs">Fat free mass</label>
+        </div>
+      </div>
     </div>
   );
 }

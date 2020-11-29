@@ -5,9 +5,13 @@ const FEMALE = 'FEMALE';
 
 function GenderSelector(props) {
   return (
-    <div>
-      <GenderOption gender={MALE} checked={props.selected === MALE} setGender={props.setGender} />
-      <GenderOption gender={FEMALE} checked={props.selected === FEMALE} setGender={props.setGender} />
+    <div class="bg-white shadow p-4 divide-y divide-gray-200 rounded mb-4">
+      <h3 class="text-l">Gender</h3>
+
+      <div class="flex flex-wrap -mx-2 overflow-hidden">
+        <GenderOption gender={MALE} checked={props.selected === MALE} setGender={props.setGender} />
+        <GenderOption gender={FEMALE} checked={props.selected === FEMALE} setGender={props.setGender} />
+      </div>
     </div>
   );
 }
