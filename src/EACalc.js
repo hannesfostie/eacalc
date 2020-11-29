@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from './Header';
 import GenderSelector from './GenderSelector';
 import BodyComposition from './BodyComposition';
+import EnergyAvailability from './EnergyAvailability';
 
 function EACalc() {
   const [state, setState] = useState({
@@ -45,6 +46,9 @@ function EACalc() {
             />
           </div>
         </div>
+      </section>
+      <section className="flex justify-center p-12">
+        <EnergyAvailability fatFreeMass={fatFreeMass} />
       </section>
     </>
   );
