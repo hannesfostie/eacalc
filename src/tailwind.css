@@ -19,7 +19,7 @@ input {
   font-size: 28px;
   color: #2D3748;
   letter-spacing: 0;
-  @apply w-16;
+  @apply w-20;
 }
 
 input:focus {
