@@ -1,6 +1,6 @@
 function Header() {
-  return(
-    <header className="bg-gray-100 justify-center flex border-b border-solid border-gray-300 pt-24 pb-12">
+  return (
+    <header className="bg-white justify-center flex border-b border-solid border-gray-300 pt-24 pb-12">
       <div className="max-w-3xl flex justify-center flex-wrap overflow-hidden grid grid-cols-3 gap-8">
         <div>
           <img

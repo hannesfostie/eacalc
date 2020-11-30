@@ -4,6 +4,7 @@ import Header from './Header';
 import GenderSelector from './GenderSelector';
 import BodyComposition from './BodyComposition';
 import EnergyAvailability from './EnergyAvailability';
+import Guidelines from './Guidelines';
 
 function EACalc() {
   const [state, setState] = useState({
@@ -22,6 +23,9 @@ function EACalc() {
   return (
     <>
       <Header />
+      <section className="flex justify-center p12">
+        <Guidelines />
+      </section>
       <section className="flex justify-center p-12">
         <div className="max-w-3xl flex justify-center flex-wrap overflow-hidden grid grid-cols-3 gap-8">
           <div>

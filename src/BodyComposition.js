@@ -1,8 +1,8 @@
+import Panel from './Panel';
+
 function BodyComposition(props) {
   return (
-    <div className="bg-white shadow p-4 divide-y divide-gray-200 rounded">
-      <h3 className="text-l">Body Composition</h3>
-
+    <Panel title="Body composition">
       <div className="flex flex-wrap -mx-4 overflow-hidden">
         <div className="my-4 px-4 w-1/4 overflow-hidden">
           <input type="number" name="bodymass" value={props.bodymass} onChange={e => props.setBodyMass(e.target.value)} />
@@ -28,7 +28,7 @@ function BodyComposition(props) {
           <label htmlFor="fatfreemass" className="text-xs">Fat free mass</label>
         </div>
       </div>
-    </div>
+    </Panel>
   );
 }
 
