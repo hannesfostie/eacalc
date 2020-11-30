@@ -4,15 +4,15 @@ function Header() {
       <div className="max-w-3xl flex justify-center flex-wrap overflow-hidden grid grid-cols-3 gap-8">
         <div>
           <img
-              src={process.env.PUBLIC_URL + '/jumping.png'}
-              srcSet={process.env.PUBLIC_URL + '/jumping.png' + ' 1x,' + process.env.PUBLIC_URL + '/jumping@2x.png' + ' 2x'}
+              src={process.env.PUBLIC_URL + "/jumping.png"}
+              srcSet={process.env.PUBLIC_URL + "/jumping.png 1x," + process.env.PUBLIC_URL + "/jumping@2x.png 2x"}
               alt="Illustration of person jumping in the air"
         />
         </div>
         <div className="col-span-2">
           <h1 className="mb-4">
             <img
-              src={process.env.PUBLIC_URL + '/logotype.svg'}
+              src={process.env.PUBLIC_URL + "/logotype.svg"}
               alt="Energy Availability Calculator logo"
             />
           </h1>
